@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { RouterModule } from '@angular/router';  // Import RouterModule for standalone component
+import { RouterModule } from '@angular/router';  
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [RouterModule]  // Import RouterModule here
+  imports: [RouterModule] 
 })
 export class AppComponent {
   title = 'course-listing-app';
