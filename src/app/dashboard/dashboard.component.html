@@ -1,24 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" routerLink="/dashboard">
-        <img src="assets/logo.png" alt="Logo" height="30" />
-        CourseApp
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" routerLink="/dashboard">Home</a>
-          </li>
-        </ul>
-        <button class="btn btn-outline-danger" (click)="logout()">Logout</button>
-      </div>
-    </div>
-  </nav>
-  
-  <div class="container mt-4">
+<div class="container mt-4">
     <div class="row mb-3">
       <div class="col-md-6">
         <input
@@ -32,36 +12,42 @@
     </div>
   
     <div class="row">
-        <div class="col-md-6 col-lg-3 mb-4" *ngFor="let course of display">
-            <div class="card h-100">
-                <div class="card-img-top text-center py-4">
-                  <i class="fas fa-book fa-2x"></i>
-                </div>
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">{{ course.title }}</h5>
-                  <p class="card-text">{{ course.description }}</p>
-                  <button
-                    class="btn btn-outline-primary mt-auto"
-                    [routerLink]="['/courses', course.id]"
-                  >
-                    View Details
-                  </button>
-                </div>
-              </div>              
+      <div class="col-md-6 col-lg-3 mb-4" *ngFor="let course of display">
+        <div class="card h-100 position-relative">
+            <div
+            class="card-img-top"
+            [ngStyle]="{'background-image': 'url(' + course.imageUrl + ')'}"
+          ></div>
+          <span class="category-badge">
+            {{ course.category }}
+          </span>
+          
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ course.title }}</h5>
+            <p class="card-text">{{ course.description }}</p>
+            <div class="d-flex justify-content-between small text-muted mb-2 mt-auto">
+              <span>{{ course.questions }} questions</span>
+              <span>{{ course.duration }} minutes</span>
+            </div>
+            <button
+              class="btn btn-outline-primary w-100"
+              [routerLink]="['/courses', course.id]"
+            >
+              View Details
+            </button>
+          </div>
         </div>
       </div>
-      <nav>
-        <ul class="pagination justify-content-center">
-          <li class="page-item" [class.disabled]="page === 1">
-            <button class="page-link" (click)="goToPage(page - 1)">Previous</button>
-          </li>
-          <li class="page-item" *ngFor="let p of pages" [class.active]="p === page">
-            <button class="page-link" (click)="goToPage(p)">{{ p }}</button>
-          </li>
-          <li class="page-item" [class.disabled]="page === totalPages">
-            <button class="page-link" (click)="goToPage(page + 1)">Next</button>
-          </li>
-        </ul>
-      </nav>
+    </div>
+  
+    <div class="text-center mt-4">
+      <button
+        class="btn btn-light border"
+        (click)="loadMore()"
+        [disabled]="page >= totalPages"
+      >
+        Load More
+      </button>
+    </div>
   </div>
   

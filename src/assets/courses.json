@@ -1,13 +1,93 @@
 [
-    { "id": 1, "title": "Angular Basics", "description": "Learn the fundamentals of Angular.", "imageUrl": "https://via.placeholder.com/150?text=Course+1" },
-    { "id": 2, "title": "Advanced Angular", "description": "Deep dive into Angular features.", "imageUrl": "https://via.placeholder.com/150?text=Course+2" },
-    { "id": 3, "title": "TypeScript Essentials", "description": "Master TypeScript for Angular.", "imageUrl": "https://via.placeholder.com/150?text=Course+3" },
-    { "id": 4, "title": "RxJS In Practice", "description": "Reactive programming with RxJS.", "imageUrl": "https://via.placeholder.com/150?text=Course+4" },
-    { "id": 5, "title": "Angular Forms", "description": "Template-driven & reactive forms.", "imageUrl": "https://via.placeholder.com/150?text=Course+5" },
-    { "id": 6, "title": "Routing & Navigation", "description": "Configure routes and guards.", "imageUrl": "https://via.placeholder.com/150?text=Course+6" },
-    { "id": 7, "title": "State Management", "description": "NgRx and other state patterns.", "imageUrl": "https://via.placeholder.com/150?text=Course+7" },
-    { "id": 8, "title": "Unit Testing", "description": "Write tests for Angular apps.", "imageUrl": "https://via.placeholder.com/150?text=Course+8" },
-    { "id": 9, "title": "Angular Performance", "description": "Optimize your Angular apps.", "imageUrl": "https://via.placeholder.com/150?text=Course+9" },
-    { "id": 10, "title": "Deploying Angular", "description": "Build and deploy strategies.", "imageUrl": "https://via.placeholder.com/150?text=Course+10" }
+    {
+      "id": 1,
+      "title": "Angular Basics",
+      "description": "Learn the fundamentals of Angular.",
+      "imageUrl": "https://via.placeholder.com/300x150.png?text=Angular+Basics",
+      "category": "LEARNING",
+      "questions": 10,
+      "duration": 30
+    },
+    {
+      "id": 2,
+      "title": "Advanced Angular",
+      "description": "Deep dive into Angular features.",
+      "imageUrl": "https://via.placeholder.com/300x150.png?text=Advanced+Angular",
+      "category": "PRACTICE",
+      "questions": 15,
+      "duration": 45
+    },
+    {
+      "id": 3,
+      "title": "TypeScript Essentials",
+      "description": "Master TypeScript for Angular.",
+      "imageUrl": "https://via.placeholder.com/300x150.png?text=TypeScript+Essentials",
+      "category": "LEARNING",
+      "questions": 8,
+      "duration": 25
+    },
+    {
+      "id": 4,
+      "title": "RxJS In Practice",
+      "description": "Reactive programming with RxJS.",
+      "imageUrl": "https://via.placeholder.com/300x150.png?text=RxJS+In+Practice",
+      "category": "PRACTICE",
+      "questions": 12,
+      "duration": 40
+    },
+    {
+      "id": 5,
+      "title": "Angular Forms",
+      "description": "Template-driven & reactive forms.",
+      "imageUrl": "https://via.placeholder.com/300x150.png?text=Angular+Forms",
+      "category": "LEARNING",
+      "questions": 9,
+      "duration": 35
+    },
+    {
+      "id": 6,
+      "title": "Routing & Navigation",
+      "description": "Configure routes and guards.",
+      "imageUrl": "https://via.placeholder.com/300x150.png?text=Routing+%26+Navigation",
+      "category": "PRACTICE",
+      "questions": 7,
+      "duration": 20
+    },
+    {
+      "id": 7,
+      "title": "State Management",
+      "description": "NgRx and other state patterns.",
+      "imageUrl": "https://via.placeholder.com/300x150.png?text=State+Management",
+      "category": "LEARNING",
+      "questions": 14,
+      "duration": 50
+    },
+    {
+      "id": 8,
+      "title": "Unit Testing",
+      "description": "Write tests for Angular apps.",
+      "imageUrl": "https://via.placeholder.com/300x150.png?text=Unit+Testing",
+      "category": "PRACTICE",
+      "questions": 11,
+      "duration": 30
+    },
+    {
+      "id": 9,
+      "title": "Angular Performance",
+      "description": "Optimize your Angular apps.",
+      "imageUrl": "https://via.placeholder.com/300x150.png?text=Performance",
+      "category": "LEARNING",
+      "questions": 6,
+      "duration": 25
+    },
+    {
+      "id": 10,
+      "title": "Deploying Angular",
+      "description": "Build and deploy strategies.",
+      "imageUrl": "https://via.placeholder.com/300x150.png?text=Deploying+Angular",
+      "category": "PRACTICE",
+      "questions": 13,
+      "duration": 45
+    }
   ]
   
