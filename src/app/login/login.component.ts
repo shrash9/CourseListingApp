@@ -11,12 +11,12 @@ import { RouterModule }  from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  // <— add these two
+  
   email: string = '';
   password: string = '';
 
   onSubmit(): void {
-    // for now just log/alert; we’ll hook up real auth & navigation later
+    
     console.log('Logging in with', this.email, this.password);
     alert(`Logged in with email: ${this.email}`);
   }

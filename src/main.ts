@@ -8,11 +8,14 @@ const routes: Route[] = [
     loadComponent: () =>
       import('./app/login/login.component').then(m => m.LoginComponent)
   },
+  {
+    path: 'signup',
+    loadComponent: () =>
+      import('./app/signup/signup.component').then(m => m.SignupComponent)
+  },
   { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];
 
 bootstrapApplication(AppComponent, {
-  providers: [
-    provideRouter(routes)
-  ]
+  providers: [provideRouter(routes)]
 });

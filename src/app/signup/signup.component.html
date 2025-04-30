@@ -1,1 +1,81 @@
-<p>signup works!</p>
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4" style="max-width: 400px; width: 100%;">
+      <h3 class="card-title text-center mb-4">Sign Up</h3>
+      <form #signUpForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label class="form-label" for="fullName">Full Name</label>
+          <input
+            class="form-control"
+            type="text"
+            id="fullName"
+            name="fullName"
+            required
+            [(ngModel)]="fullName"
+            #fullNameField="ngModel"
+          />
+          <div class="invalid-feedback d-block" *ngIf="fullNameField.invalid && fullNameField.touched">
+            Name is required.
+          </div>
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label" for="email">Email address</label>
+          <input
+            class="form-control"
+            type="email"
+            id="email"
+            name="email"
+            required
+            [(ngModel)]="email"
+            #emailField="ngModel"
+          />
+          <div class="invalid-feedback d-block" *ngIf="emailField.invalid && emailField.touched">
+            A valid email is required.
+          </div>
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label" for="password">Password</label>
+          <input
+            class="form-control"
+            type="password"
+            id="password"
+            name="password"
+            required
+            minlength="6"
+            [(ngModel)]="password"
+            #passwordField="ngModel"
+          />
+          <div class="invalid-feedback d-block" *ngIf="passwordField.invalid && passwordField.touched">
+            Password (min 6 chars) is required.
+          </div>
+        </div>
+  
+        <div class="mb-3">
+          <label class="form-label" for="confirmPassword">Confirm Password</label>
+          <input
+            class="form-control"
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+            [(ngModel)]="confirmPassword"
+            #confirmPasswordField="ngModel"
+          />
+          <div class="invalid-feedback d-block" *ngIf="confirmPasswordField.invalid && confirmPasswordField.touched">
+            Confirmation is required.
+          </div>
+        </div>
+  
+        <button class="btn btn-success w-100" type="submit" [disabled]="signUpForm.invalid || password !== confirmPassword">
+          <i class="fas fa-user-plus me-1"></i>
+          Sign Up
+        </button>
+      </form>
+  
+      <div class="text-center mt-3">
+        <a routerLink="/login">Already have an account? Log in.</a>
+      </div>
+    </div>
+  </div>
+  
