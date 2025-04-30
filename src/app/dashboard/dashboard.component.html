@@ -1,1 +1,43 @@
-<p>dashboard works!</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/dashboard">
+        <img src="assets/logo.png" alt="Logo" height="30" />
+        CourseApp
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/dashboard">Home</a>
+          </li>
+        </ul>
+        <button class="btn btn-outline-danger" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container mt-4">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by title"
+          [(ngModel)]="searchTerm"
+        />
+      </div>
+    </div>
+  
+    <div class="row">
+      <!-- course cards will go here -->
+    </div>
+  
+    <nav>
+      <ul class="pagination justify-content-center">
+        <!-- pagination controls will go here -->
+      </ul>
+    </nav>
+  </div>
+  
