@@ -1,12 +1,22 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';  // Import RouterModule for standalone component
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  standalone: true,
+  imports: [RouterModule]  // Import RouterModule here
 })
 export class AppComponent {
   title = 'course-listing-app';
+
+  constructor(private router: Router) {}
+
+  logout(): void {
+    localStorage.removeItem('userToken');
+    sessionStorage.clear();
+    this.router.navigate(['/login']);
+  }
 }
