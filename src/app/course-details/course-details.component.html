@@ -1,1 +1,21 @@
-<p>course-details works!</p>
+<div class="container mt-4" *ngIf="course; else notfound">
+    <button class="btn btn-link mb-3" routerLink="/dashboard">
+      ← Back to Dashboard
+    </button>
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">{{ course.title }}</h2>
+        <p class="card-text">{{ course.description }}</p>
+        <hr />
+        <p><strong>Course ID:</strong> {{ course.id }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #notfound>
+    <div class="container mt-4">
+      <p class="text-danger">Course not found.</p>
+      <button class="btn btn-link" routerLink="/dashboard">← Back to Dashboard</button>
+    </div>
+  </ng-template>
+  

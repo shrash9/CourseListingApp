@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Router } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 interface Course {
   id: number;
@@ -31,7 +32,7 @@ export class DashboardComponent implements OnInit {
   constructor(private router: Router, private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<Course[]>('assets/courses.json').subscribe(data => {
+    this.http.get<Course[]>(`${environment.apiUrl}/courses`).subscribe(data => {
       this.courses = data;
       this.applyFilter();
     });
@@ -39,9 +40,7 @@ export class DashboardComponent implements OnInit {
 
   applyFilter(): void {
     const term = this.searchTerm.toLowerCase();
-    this.filtered = this.courses.filter(c =>
-      c.title.toLowerCase().includes(term)
-    );
+    this.filtered = this.courses.filter(c => c.title.toLowerCase().includes(term));
     this.totalPages = Math.ceil(this.filtered.length / this.pageSize);
     this.pages = Array.from({ length: this.totalPages }, (_, i) => i + 1);
     this.goToPage(1);
