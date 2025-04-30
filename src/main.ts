@@ -20,6 +20,11 @@ const routes: Route[] = [
     loadComponent: () =>
       import('./app/dashboard/dashboard.component').then(m => m.DashboardComponent)
   },
+  {
+    path: 'courses/:id',
+    loadComponent: () =>
+      import('./app/course-details/course-details.component').then(m => m.CourseDetailsComponent)
+  },
   { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];
 

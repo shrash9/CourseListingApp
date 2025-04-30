@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule }   from '@angular/forms';
-import { RouterModule }  from '@angular/router';
+import { RouterModule, Router }  from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,13 +11,12 @@ import { RouterModule }  from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  
-  email: string = '';
-  password: string = '';
+  email = '';
+  password = '';
+
+  constructor(private router: Router) {}
 
   onSubmit(): void {
-    
-    console.log('Logging in with', this.email, this.password);
-    alert(`Logged in with email: ${this.email}`);
+    this.router.navigate(['/dashboard']);
   }
 }

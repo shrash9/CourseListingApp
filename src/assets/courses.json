@@ -1,0 +1,13 @@
+[
+    { "id": 1, "title": "Angular Basics", "description": "Learn the fundamentals of Angular.", "imageUrl": "https://via.placeholder.com/150?text=Course+1" },
+    { "id": 2, "title": "Advanced Angular", "description": "Deep dive into Angular features.", "imageUrl": "https://via.placeholder.com/150?text=Course+2" },
+    { "id": 3, "title": "TypeScript Essentials", "description": "Master TypeScript for Angular.", "imageUrl": "https://via.placeholder.com/150?text=Course+3" },
+    { "id": 4, "title": "RxJS In Practice", "description": "Reactive programming with RxJS.", "imageUrl": "https://via.placeholder.com/150?text=Course+4" },
+    { "id": 5, "title": "Angular Forms", "description": "Template-driven & reactive forms.", "imageUrl": "https://via.placeholder.com/150?text=Course+5" },
+    { "id": 6, "title": "Routing & Navigation", "description": "Configure routes and guards.", "imageUrl": "https://via.placeholder.com/150?text=Course+6" },
+    { "id": 7, "title": "State Management", "description": "NgRx and other state patterns.", "imageUrl": "https://via.placeholder.com/150?text=Course+7" },
+    { "id": 8, "title": "Unit Testing", "description": "Write tests for Angular apps.", "imageUrl": "https://via.placeholder.com/150?text=Course+8" },
+    { "id": 9, "title": "Angular Performance", "description": "Optimize your Angular apps.", "imageUrl": "https://via.placeholder.com/150?text=Course+9" },
+    { "id": 10, "title": "Deploying Angular", "description": "Build and deploy strategies.", "imageUrl": "https://via.placeholder.com/150?text=Course+10" }
+  ]
+  
