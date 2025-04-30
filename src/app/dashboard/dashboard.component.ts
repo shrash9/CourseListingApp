@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -11,4 +11,11 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
+  searchTerm = '';
+
+  constructor(private router: Router) {}
+
+  logout(): void {
+    this.router.navigate(['/login']);
+  }
 }
